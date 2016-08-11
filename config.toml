@@ -1,0 +1,6 @@
+siteTitle="oRanger"
+siteDescription="With Pulp oRanger gatsby scaffold"
+siteUrl= "http://withpulp.com"
+copyrightMessage= "<a href='http://withpulp.com' target='_blank'>With Pulp</a>. Code available on <a href='http://github.com' target='_blank'>GitHub</a>."
+linkPrefix= ""
+#gaCode= "UA-XXX-X"
