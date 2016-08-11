@@ -1,6 +1,12 @@
-# gatsby-withpulp.com
+# gatsby-oRanger
 
-With Pulp website. Built on top of Gatsby (using React and Webpack).
+With Pulp oRanger [gatsby](https://github.com/gatsbyjs/gatsby) scaffold.
+
+## TODO
+
+> see comments in code
+
+* posts pages
 
 ## Running in development
 `gatsby develop`
