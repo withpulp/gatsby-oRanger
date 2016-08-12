@@ -1,4 +1,9 @@
-/* RESPONSIVE STYLES */
+/* CORE ELEMENTS */
+
+/* FOR: global styles on elements: */
+/* FOR EXAMPLE: section, figure, form, button, etc... */
+/* NOT FOR: typography, action states */
+/* NOT FOR EXAMPLE: p, h1, li, td, label, button:hover, a:hover, etc... */
 
 /* Custom, iPhone Retina */
 @media only screen and (min-width : 320px) {
@@ -13,11 +18,6 @@
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {
 
-    /* header logo */
-    .header .logo {
-        width: 3em;
-        height: 3em;
-    }
 }
 
 /* Medium Devices, Desktops */

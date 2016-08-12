@@ -4,9 +4,9 @@ import Header from '../containers/header';
 import Footer from '../containers/footer';
 
 // @TODO: inject css as javascript (reference utils/typography)
-import 'css/animations.css';
-import 'css/responsive.css';
+import 'css/elements.css';
 import 'css/states.css';
+import 'css/animations.css';
 
 const style = {
     template: {
