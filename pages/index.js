@@ -5,7 +5,26 @@ import { prefixLink } from 'gatsby-helpers';
 
 import Hero from '../containers/hero';
 import Message from '../components/message';
+import { rhythm } from 'utils/typography';
 import { config } from 'config';
+
+const style = {
+    page: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '100%',
+        height: 'auto',
+        margin: '0 auto',
+        padding: 0
+    },
+    section: {
+        minHeight: '25vh',
+        padding: rhythm(1 / 2)
+    },
+    title: {
+
+    }
+};
 
 class Index extends Component {
 
@@ -20,11 +39,11 @@ class Index extends Component {
 
         return (
             <DocumentTitle title={config.siteTitle}>
-                <main className="index page">
+                <main className="index page" style={style.page}>
                     <Hero meta={hero} route={route}/>
 
-                    <section className="about section">
-                        <h2 className="title">About</h2>
+                    <section className="title section" style={style.section}>
+                        <h2 className="title" style={style.title}>Hello World</h2>
 
                         <Message message={message} />
                     </section>

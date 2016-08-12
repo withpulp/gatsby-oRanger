@@ -4,6 +4,22 @@ import React, { Component, PropTypes } from 'react';
 // send props to the container - return different components depending on params
 // pass component classes using props
 
+const style = {
+    copyrightFigure: {
+        position: 'absolute',
+        bottom: 0,
+        left: 0,
+        width: '100%',
+        height: 'auto',
+        margin: '0 auto'
+    },
+    copyrightMessage: {
+        color: '#fff',
+        fontSize: '11px',
+        textAlign: 'center'
+    }
+};
+
 class Message extends Component {
 
     render() {
@@ -20,8 +36,8 @@ class Message extends Component {
             // copyright message
             if (meta.copyright) {
                 figure = (
-                    <figure className="copyright message figure">
-                        <p className="caption message">&copy;{meta.copyright}, <span dangerouslySetInnerHTML={{__html: message}}/></p>
+                    <figure className="copyright message figure" style={style.copyrightFigure}>
+                        <p className="caption message" style={style.copyrightMessage}>&copy;{meta.copyright}, <span dangerouslySetInnerHTML={{__html: message}}/></p>
                     </figure>
                 );
             }

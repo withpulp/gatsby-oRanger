@@ -4,6 +4,7 @@ import moment from 'moment';
 
 import Hero from '../containers/hero';
 import { fixLinks } from 'utils';
+import { rhythm } from 'utils/typography';
 import { config } from 'config';
 
 // @TODO: refactor markdown wrapper

@@ -1,0 +1,15 @@
+/* ELEMENT STATES STYLES */
+
+/* header headroom */
+.header .headroom.headroom--unpinned {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.header .headroom.headroom--pinned {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 0.83333rem;
+}
