@@ -31,7 +31,7 @@ class MarkdownWrapper extends Component {
         };
 
         return (
-            <DocumentTitle title={data.title ? `${data.siteTitle} | ${data.title}` : config.siteTitle}>
+            <DocumentTitle title={data.title ? `${config.siteTitle} | ${data.title}` : config.siteTitle}>
                 <main className="markdown wrapper">
                     <Hero meta={hero} route={route}/>
 
