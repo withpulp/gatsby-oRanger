@@ -9,6 +9,7 @@ import { config } from 'config';
 
 // @TODO: refactor markdown wrapper
 // render different components/pages/containers by route
+// reference: https://github.com/campjs/campjs-vii/blob/master/wrappers/md.jsx
 // post page container to place inside wrapper?
 // should we load different page containers using logic?
 // posts and post components?
