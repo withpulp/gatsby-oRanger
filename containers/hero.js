@@ -57,7 +57,11 @@ class Hero extends Component {
                 </section>
             );
         } else {
-            hero = null;
+            hero = (
+                <section className="hero section" style={style.hero}>
+                    <h2 className="title" style={style.title}>{meta.title}</h2>
+                </section>
+            )
         }
 
         return hero;

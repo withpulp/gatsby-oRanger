@@ -40,6 +40,7 @@ class Index extends Component {
         };
 
         // @TODO: move this logic into a posts container
+        // only get blog post pages
 
         const postsList = [];
         // Sort post links.
