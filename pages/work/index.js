@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react';
+import { RouteHandler } from 'react-router'
 import DocumentTitle from 'react-document-title';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
