@@ -55,7 +55,8 @@ class WorkIndex extends Component {
 }
 
 WorkIndex.propTypes = {
-    route: PropTypes.object
+    route: PropTypes.object,
+    location: PropTypes.object
 };
 
 export default WorkIndex;
