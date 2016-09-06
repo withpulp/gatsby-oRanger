@@ -27,7 +27,10 @@ const style = {
         width: '50px',
         height: '50px',
         margin: 0,
-        verticalAlign: 'middle'
+        verticalAlign: 'middle',
+        border: `${rhythm(1 / 16)} solid`,
+        padding: rhythm(1 / 4),
+        backgroundColor: '#fff'
     }
 };
 
