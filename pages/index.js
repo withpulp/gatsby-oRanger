@@ -9,6 +9,7 @@ import { prefixLink } from 'gatsby-helpers';
 
 import Hero from '../containers/hero';
 import Message from '../components/message';
+import social from '../constants/social';
 import { rhythm } from 'utils/typography';
 import { config } from 'config';
 
@@ -26,7 +27,6 @@ const style = {
         padding: rhythm(1 / 2)
     },
     title: {
-
     }
 };
 
@@ -38,6 +38,19 @@ class Index extends Component {
         const hero = {
             title: config.siteTitle
         };
+
+        // @TODO: move this logic into a social container
+
+        const socialLinks = []
+        const socialPrint = social.forEach((social) => {
+            socialLinks.push(
+              <li key={social.link} className="social item">
+                <a className="social link" target="_blank" href={social.link}>
+                  {social.name}
+                </a>
+              </li>
+            )
+        });
 
         // @TODO: move this logic into a posts container
         // only get blog post pages
@@ -74,11 +87,17 @@ class Index extends Component {
                     <Hero meta={hero} route={route}/>
 
                     <section className="blog section" style={style.section}>
-                        <h2 className="title" style={style.title}>Markdown Blog</h2>
+                      <h2 className="title" style={style.title}>Markdown Blog</h2>
 
-                        <ul className="posts list" style={style.posts}>
-                            {postsList}
-                        </ul>
+                      <ul className="posts list" style={style.posts}>
+                        {postsList}
+                      </ul>
+                    </section>
+
+                    <section className="social links">
+                      <ul className="social list">
+                        {socialLinks}
+                      </ul>
                     </section>
                 </main>
             </DocumentTitle>
