@@ -29,18 +29,15 @@ class Posts extends Component {
 		).reverse();
 
 		sortedPosts.forEach((post) => {
-				if (access(post, 'file.ext') === 'md' && include(post.path, '/blog') && !include(post.path, '/404')) {
+				if (access(post, 'file.ext') === 'md' && access(post, 'data.layout') === 'post' && !include(post.path, '/404')) {
 					postsList.push(<Post meta={post} key={post.path} />);
 				}
 		});
 
 		if (meta.type === 'featured') {
-			// @TODO: slice postsList array to limit number of featured posts
-			// ref: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice
-
 			posts = (
 				<ul className="featured posts list">
-					{postsList}
+					{postsList.slice(0,3)}
 				</ul>
 			);
 		} else {

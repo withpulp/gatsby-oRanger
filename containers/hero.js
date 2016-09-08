@@ -42,8 +42,6 @@ class Hero extends Component {
         const { meta, route } = this.props;
         const page = route.page;
 
-        console.log(page);
-
         let hero;
 
         if (page.path === prefixLink('/')) {
