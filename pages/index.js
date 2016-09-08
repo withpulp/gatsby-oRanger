@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
-
 import Hero from 'containers/hero';
 import Posts from 'containers/posts';
-import Message from 'components/message';
 import social from 'constants/social';
 import { rhythm } from 'utils/typography';
 import { config } from 'config';
@@ -30,15 +28,14 @@ class Index extends Component {
     render() {
         const { route } = this.props;
         const hero = {
-          title: config.siteTitle,
-          route: route
+          title: config.siteTitle
         };
         const posts = {
           type: 'featured',
           pages: route.pages
         }
 
-        // @TODO: move soical links logic into a container
+        // @TODO: move this logic into a container
         // create universal figure container - see message component for details
 
         const socialLinks = []
@@ -60,9 +57,7 @@ class Index extends Component {
                     <section className="blog section" style={style.section}>
                       <h2 className="title" style={style.title}>Markdown Blog</h2>
 
-                      <ul className="posts list" style={style.posts}>
-                        <Posts meta={posts} />
-                      </ul>
+                      <Posts meta={posts} />
                     </section>
 
                     <section className="social section">

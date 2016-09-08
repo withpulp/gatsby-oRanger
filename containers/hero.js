@@ -40,7 +40,9 @@ const style = {
 class Hero extends Component {
     render() {
         const { meta, route } = this.props;
-        const page = meta.route.page;
+        const page = route.page;
+
+        console.log(page);
 
         let hero;
 
