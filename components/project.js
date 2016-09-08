@@ -5,20 +5,20 @@ import { prefixLink } from 'gatsby-helpers';
 import { rhythm } from 'utils/typography';
 
 const style = {
-	post: {
+  project: {
     position: 'relative',
     display: 'block',
     marginBottom: rhythm(1 / 2)
   }
-}
+};
 
-class Post extends Component {
+class Project extends Component {
 	render () {
 		const { meta } = this.props;
 
 		return (
-			<li className="post item" style={style.post}>
-				<Link className="post link" to={prefixLink(meta.path)}>
+			<li className="project item" style={style.project}>
+				<Link className="project link" to={prefixLink(meta.path)}>
 					<h4 className="title">
 						{meta.data.title}
 						<small className="meta date">
@@ -31,8 +31,8 @@ class Post extends Component {
 	}
 }
 
-Post.propTypes = {
+Project.propTypes = {
 	meta: PropTypes.object
 }
 
-export default Post;
+export default Project;

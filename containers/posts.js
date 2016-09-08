@@ -7,15 +7,10 @@ import Post from 'components/post';
 import { rhythm } from 'utils/typography';
 
 const style = {
-    posts: {
-        position: 'relative',
-        listStyle: 'none'
-    },
-    post: {
-        position: 'relative',
-        display: 'block',
-        marginBottom: rhythm(1 / 2)
-    }
+  posts: {
+    position: 'relative',
+    listStyle: 'none'
+  }
 };
 
 class Posts extends Component {
@@ -36,13 +31,13 @@ class Posts extends Component {
 
 		if (meta.type === 'featured') {
 			posts = (
-				<ul className="featured posts list">
+				<ul className="featured posts list" style={style.posts}>
 					{postsList.slice(0,3)}
 				</ul>
 			);
 		} else {
 			posts = (
-				<ul className="posts list">
+				<ul className="posts list" style={style.posts}>
 					{postsList}
 				</ul>
 			);
