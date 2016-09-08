@@ -1,3 +1,5 @@
+// @TODO: add object keys to define icons from font-awesome or other libraries
+
 const social = [{
 	name: 'Twitter',
 	link: 'http://twitter.com/'

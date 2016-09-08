@@ -1,15 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import DocumentTitle from 'react-document-title';
-import sortBy from 'lodash/sortBy';
-import access from 'safe-access';
-import include from 'underscore.string/include';
-import moment from 'moment';
-import { Link } from 'react-router';
-import { prefixLink } from 'gatsby-helpers';
 
-import Hero from '../containers/hero';
-import Message from '../components/message';
-import social from '../constants/social';
+import Hero from 'containers/hero';
+import Posts from 'containers/posts';
+import Message from 'components/message';
+import social from 'constants/social';
 import { rhythm } from 'utils/typography';
 import { config } from 'config';
 
@@ -34,12 +29,17 @@ class Index extends Component {
 
     render() {
         const { route } = this.props;
-
         const hero = {
-            title: config.siteTitle
+          title: config.siteTitle,
+          route: route
         };
+        const posts = {
+          type: 'featured',
+          pages: route.pages
+        }
 
-        // @TODO: move this logic into a social container
+        // @TODO: move soical links logic into a container
+        // create universal figure container - see message component for details
 
         const socialLinks = []
         const socialPrint = social.forEach((social) => {
@@ -52,35 +52,6 @@ class Index extends Component {
             )
         });
 
-        // @TODO: move this logic into a posts container
-        // only get blog post pages
-
-        const postsList = [];
-        // Sort post links.
-        const sortedPosts = sortBy(this.props.route.pages, (page) => access(page, 'data.date')
-        ).reverse();
-
-        sortedPosts.forEach((post) => {
-            if (access(post, 'file.ext') === 'md' && !include(post.path, '/404')) {
-                const title = access(post, 'data.title') || post.path;
-
-                postsList.push(
-                    // @TODO: create post item component
-                    <li className="post item" key={post.path} style={style.post}>
-
-                        <Link className="post link" style={style.Link} to={prefixLink(post.path)}>
-                            <h4 className="title" style={style.title}>
-                                {title}
-                                <small className="meta date" style={style.meta}>
-                                    {moment(post.data.date).calendar()}
-                                </small>
-                            </h4>
-                        </Link>
-                    </li>
-                )
-            }
-        });
-
         return (
             <DocumentTitle title={config.siteTitle}>
                 <main className="index page" style={style.page}>
@@ -90,11 +61,11 @@ class Index extends Component {
                       <h2 className="title" style={style.title}>Markdown Blog</h2>
 
                       <ul className="posts list" style={style.posts}>
-                        {postsList}
+                        <Posts meta={posts} />
                       </ul>
                     </section>
 
-                    <section className="social links">
+                    <section className="social section">
                       <ul className="social list">
                         {socialLinks}
                       </ul>
