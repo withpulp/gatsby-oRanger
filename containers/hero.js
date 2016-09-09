@@ -4,11 +4,8 @@ import include from 'underscore.string/include';
 import { prefixLink } from 'gatsby-helpers';
 import { rhythm } from 'utils/typography';
 
-// @TODO: inject css like typography
-// that way can avoid duplicate classes like these
-
 const style = {
-  indexHero: {
+  hero: {
     display: 'flex',
     position: 'relative',
     width: '100%',
@@ -19,22 +16,16 @@ const style = {
     justifyContent: 'center',
     textAlign: 'center'
   },
-  indexTitle: {
+  title: {
     margin: '0 auto',
     color: '#e76600',
     fontFamily: 'Montserrat, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif'
   },
-  hero: {
-    display: 'flex',
-    position: 'relative',
-    width: '100%',
-    height: '25vh',
-    margin: '0 auto',
-    padding: rhythm(1 / 2)
-  },
-  title: {
-    margin: '0 auto'
-  }
+  meta: {
+		display: 'block',
+		color: '#777',
+		fontSize: '50%'
+	}
 };
 
 class Hero extends Component {
@@ -46,14 +37,19 @@ class Hero extends Component {
 
     if (page.path === prefixLink('/')) {
       hero = (
-        <section className="index hero section" style={style.indexHero}>
-          <h1 className="title" style={style.indexTitle}>{meta.title}</h1>
+        <section className="index hero section" style={style.hero}>
+          <h1 className="title" style={style.title}>{meta.title}</h1>
         </section>
       );
     } else if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
       hero = (
         <section className="hero section" style={style.hero}>
-          <h2 className="title" style={style.title}>{meta.title}</h2>
+          <h2 className="title" style={style.title}>
+            {meta.title}
+            <small className="meta date" style={style.meta}>
+              {meta.date}
+            </small>
+          </h2>
         </section>
       );
     } else {

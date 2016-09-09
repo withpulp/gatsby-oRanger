@@ -18,7 +18,8 @@ const style = {
 	},
 	meta: {
 		display: 'block',
-		color: '#777'
+		color: '#777',
+		fontSize: '50%'
 	}
 }
 

@@ -10,71 +10,69 @@ import { rhythm } from 'utils/typography';
 // image container with different image components for logo?
 
 const style = {
-    header: {
-        position: 'absolute',
-        width: 'auto',
-        height: 'auto',
-        margin: '0 auto',
-        padding: rhythm(1 / 2),
-        zIndex: 3
-    },
-    wrapper: {
-        position: 'relative',
-        width: 'auto',
-        height: 'auto !important'
-    },
-    logo: {
-        width: '50px',
-        height: '50px',
-        margin: 0,
-        verticalAlign: 'middle',
-        border: `${rhythm(1 / 16)} solid`,
-        padding: rhythm(1 / 4),
-        backgroundColor: '#fff'
-    }
+  header: {
+    position: 'absolute',
+    width: 'auto',
+    height: 'auto',
+    margin: '0 auto',
+    padding: rhythm(1 / 2),
+    zIndex: 3
+  },
+  wrapper: {
+    position: 'relative',
+    width: 'auto',
+    height: 'auto !important'
+  },
+  logo: {
+    width: '50px',
+    height: '50px',
+    margin: 0,
+    verticalAlign: 'middle',
+    border: `${rhythm(1 / 16)} solid`,
+    padding: rhythm(1 / 4),
+    backgroundColor: '#fff'
+  }
 };
 
 class Header extends Component {
+  render() {
+    const { location } = this.props;
 
-    render() {
-        const { location } = this.props;
+    let header;
 
-        let header;
-
-        if (location.pathname === prefixLink('/')) {
-            header = (
-                <header className="index header" style={style.header}>
-                    <Headroom disableInlineStyles
-                              wrapperStyle={style.wrapper}>
-                        <Link className="link" to={prefixLink('/')}>
-                            <img className="logo image" src={prefixLink('/logo.png')} style={style.logo}/>
-                        </Link>
-                    </Headroom>
-                </header>
-            );
-        } else {
-            header = (
-                <header className="header" style={style.header}>
-                    <Headroom disableInlineStyles
-                              onPin={() => console.log('header pinned')}
-                              onUnpin={() => console.log('header unpinned')}
-                              wrapperStyle={style.wrapper}
-                              style={style.headroom}>
-                        <Link className="link" to={prefixLink('/')}>
-                            <img className="logo image" src={prefixLink('/logo.png')} style={style.logo}/>
-                        </Link>
-                    </Headroom>
-                </header>
-            );
-        }
-
-        return header;
+    if (location.pathname === prefixLink('/')) {
+      header = (
+        <header className="index header" style={style.header}>
+          <Headroom disableInlineStyles
+                    wrapperStyle={style.wrapper}
+                    style={style.headroom}>
+            <Link className="link" to={prefixLink('/')}>
+              <img className="logo image" src={prefixLink('/logo.png')} style={style.logo}/>
+            </Link>
+          </Headroom>
+        </header>
+      );
+    } else {
+      header = (
+        <header className="header" style={style.header}>
+          <Headroom disableInlineStyles
+                    wrapperStyle={style.wrapper}
+                    style={style.headroom}>
+            <Link className="link" to={prefixLink('/')}>
+              <img className="logo image" src={prefixLink('/logo.png')} style={style.logo}/>
+            </Link>
+          </Headroom>
+        </header>
+      );
     }
+
+    return header;
+  }
 }
 
 Header.propTypes = {
-    location: PropTypes.object,
-    route: PropTypes.object
+  location: PropTypes.object,
+  route: PropTypes.object
 };
 
 export default Header;
