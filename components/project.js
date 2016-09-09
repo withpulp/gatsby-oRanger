@@ -9,7 +9,17 @@ const style = {
     position: 'relative',
     display: 'block',
     marginBottom: rhythm(1 / 2)
-  }
+  },
+  link: {
+		textDecoration: 'none'
+	},
+	title: {
+		transition: 'all 250ms'
+	},
+	meta: {
+		display: 'block',
+		color: '#777'
+	}
 };
 
 class Project extends Component {
@@ -18,10 +28,10 @@ class Project extends Component {
 
 		return (
 			<li className="project item" style={style.project}>
-				<Link className="project link" to={prefixLink(meta.path)}>
-					<h4 className="title">
+				<Link className="project link" to={prefixLink(meta.path)} style={style.link}>
+					<h4 className="title" style={style.title}>
 						{meta.data.title}
-						<small className="meta date">
+						<small className="meta date" style={style.meta}>
 							{moment(meta.data.date).calendar()}
 						</small>
 					</h4>

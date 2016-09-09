@@ -9,7 +9,17 @@ const style = {
     position: 'relative',
     display: 'block',
     marginBottom: rhythm(1 / 2)
-  }
+  },
+	link: {
+		textDecoration: 'none'
+	},
+	title: {
+		transition: 'all 250ms'
+	},
+	meta: {
+		display: 'block',
+		color: '#777'
+	}
 }
 
 class Post extends Component {
@@ -18,10 +28,10 @@ class Post extends Component {
 
 		return (
 			<li className="post item" style={style.post}>
-				<Link className="post link" to={prefixLink(meta.path)}>
-					<h4 className="title">
+				<Link className="post link" to={prefixLink(meta.path)} style={style.link}>
+					<h4 className="title" style={style.title}>
 						{meta.data.title}
-						<small className="meta date">
+						<small className="meta date" style={style.meta}>
 							{moment(meta.data.date).calendar()}
 						</small>
 					</h4>

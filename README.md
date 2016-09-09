@@ -4,9 +4,12 @@ With Pulp oRanger [gatsby](https://github.com/gatsbyjs/gatsby) scaffold.
 
 ## TODO
 
-> see comments in code
+* sass for variables (weigh the benefits)
+* update npm packages (gatsby 1.0 in the works)
+* create figure and section containers (need to brainstorm this or consider using existing framework)
+* create components for html elements (button, li, p, a, h1, etc. - or use existing framework)
 
-* posts pages
+> see comments in code for more @TODO 
 
 ## Running in development
 `gatsby develop`

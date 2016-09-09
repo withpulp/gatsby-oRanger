@@ -9,6 +9,7 @@ import { rhythm } from 'utils/typography';
 const style = {
   posts: {
     position: 'relative',
+    margin: '0 auto',
     listStyle: 'none'
   }
 };
@@ -31,13 +32,13 @@ class Posts extends Component {
 
 		if (meta.type === 'featured') {
 			posts = (
-				<ul className="featured posts list" style={style.posts}>
+				<ul className="featured posts collection list" style={style.posts}>
 					{postsList.slice(0,3)}
 				</ul>
 			);
 		} else {
 			posts = (
-				<ul className="posts list" style={style.posts}>
+				<ul className="posts collection list" style={style.posts}>
 					{postsList}
 				</ul>
 			);

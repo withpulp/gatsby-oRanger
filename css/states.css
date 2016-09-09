@@ -6,15 +6,22 @@
 /* NOT FOR EXAMPLE:  p, h1, li, td, label, section, figure, form, button, etc... */
 
 /* header headroom */
+
 .header .headroom.headroom--unpinned {
-    position: relative;
-    top: 0;
-    left: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 .header .headroom.headroom--pinned {
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 0.83333rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0.83333rem;
+}
+
+/* collection list */
+
+.collection.list .item .link:hover .title {
+  color: #ff995e;
 }

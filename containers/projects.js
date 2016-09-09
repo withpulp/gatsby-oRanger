@@ -9,6 +9,7 @@ import { rhythm } from 'utils/typography';
 const style = {
   projects: {
     position: 'relative',
+    margin: '0 auto',
     listStyle: 'none'
   }
 };
@@ -31,13 +32,13 @@ class Projects extends Component {
 
 		if (meta.type === 'featured') {
 			projects = (
-				<ul className="featured projects list" style={style.projects}>
+				<ul className="featured projects collection list" style={style.projects}>
 					{projectsList.slice(0,3)}
 				</ul>
 			);
 		} else {
 			projects = (
-				<ul className="projects list" style={style.projects}>
+				<ul className="projects collection list" style={style.projects}>
 					{projectsList}
 				</ul>
 			);
