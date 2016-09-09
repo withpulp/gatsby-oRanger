@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
+import Copyright from '../containers/copyright';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from '../config';
-import Message from '../components/message';
 
 // @TODO: subscribe container (form component)
 
@@ -25,16 +25,14 @@ const style = {
   }
 };
 
-const copyrightMeta = {
-  copyright: moment().year()
-};
-
-const copyrightMessage = config.copyrightMessage;
-
 class Footer extends Component {
 
   render() {
     const { location } = this.props;
+    const copyright = {
+      year: moment().year(),
+      message: config.copyrightMessage
+    }
 
     let footer;
 
@@ -42,13 +40,13 @@ class Footer extends Component {
       footer = (
         <footer className="index footer" style={style.footer}>
           <h6 className="title" style={style.title}>VERSION: {config.siteVersion}</h6>
-          <Message message={copyrightMessage} meta={copyrightMeta} />
+          <Copyright meta={copyright} />
         </footer>
       );
     } else {
       footer = (
         <footer className="footer" style={style.footer}>
-          <Message message={copyrightMessage} meta={copyrightMeta} />
+          <Copyright meta={copyright} />
         </footer>
       );
     }

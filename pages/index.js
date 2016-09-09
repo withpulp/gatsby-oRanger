@@ -14,7 +14,8 @@ const style = {
     width: '100%',
     height: 'auto',
     margin: '0 auto',
-    padding: 0
+    padding: 0,
+    paddingBottom: rhythm(2)
   },
   section: {
     minHeight: '25vh',
@@ -39,20 +40,6 @@ class Index extends Component {
       pages: route.pages
     };
 
-    // @TODO: move this logic into a container
-    // create universal figure container - see message component for details
-
-    const socialLinks = []
-    const socialPrint = social.forEach((social) => {
-      socialLinks.push(
-        <li key={social.link} className="social item">
-          <a className="social link" target="_blank" href={social.link}>
-            {social.name}
-          </a>
-        </li>
-      );
-    });
-
     return (
       <DocumentTitle title={config.siteTitle}>
         <main className="index page" style={style.page}>
@@ -66,12 +53,6 @@ class Index extends Component {
           <section className="blog section" style={style.section}>
             <h2 className="title" style={style.title}>Blog</h2>
             <Posts meta={posts} />
-          </section>
-
-          <section className="social section">
-            <ul className="social list">
-              {socialLinks}
-            </ul>
           </section>
         </main>
       </DocumentTitle>
