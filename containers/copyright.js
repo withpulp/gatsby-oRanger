@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react';
 import social from 'constants/social';
-import { rhythm } from 'utils/typography';
+import { rhythm, fontSizeToMS } from 'utils/typography';
 
 const style = {
   copyright: {
@@ -20,11 +20,11 @@ const style = {
 	item: {
 		display: 'inline-block',
 		margin: `0 ${rhythm(1/2)}`,
-		fontSize: '11px'
+		fontSize: fontSizeToMS(-0.5).fontSize
 	},
 	message: {
 		color: '#fff',
-    fontSize: '11px',
+    fontSize: fontSizeToMS(-0.5).fontSize,
     textAlign: 'center'
 	}
 };

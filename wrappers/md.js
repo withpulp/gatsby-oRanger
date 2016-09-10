@@ -56,7 +56,7 @@ class MarkdownWrapper extends Component {
             <article className="markdown article" ref="markdown" dangerouslySetInnerHTML={{__html: data.body}} style={style.article} />
           </main>
         </DocumentTitle>
-      )
+      );
     }
 
     return layout;

@@ -1,8 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
-import Copyright from '../containers/copyright';
+import access from 'safe-access';
+import include from 'underscore.string/include';
+import Copyright from 'containers/copyright';
+import Next from 'containers/next';
 import { prefixLink } from 'gatsby-helpers';
-import { config } from '../config';
+import { config } from 'config';
 
 // @TODO: subscribe container (form component)
 
@@ -28,11 +31,18 @@ const style = {
 class Footer extends Component {
 
   render() {
-    const { location } = this.props;
+    const { location, route } = this.props;
     const copyright = {
       year: moment().year(),
       message: config.copyrightMessage
-    }
+    };
+
+    // @TODO: page doesn't exists since footer is outside of route data
+    // need match location with pages array path and fetch data that way
+    const page = route.page;
+    console.log(page);
+    console.log(location);
+    console.log(route.pages);
 
     let footer;
 
@@ -40,6 +50,13 @@ class Footer extends Component {
       footer = (
         <footer className="index footer" style={style.footer}>
           <h6 className="title" style={style.title}>VERSION: {config.siteVersion}</h6>
+          <Copyright meta={copyright} />
+        </footer>
+      );
+    } else if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
+      footer = (
+        <footer className="index footer" style={style.footer}>
+
           <Copyright meta={copyright} />
         </footer>
       );
