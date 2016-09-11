@@ -23,6 +23,7 @@ const style = {
 		fontSize: fontSizeToMS(-0.5).fontSize
 	},
 	message: {
+    margin: '0 auto',
 		color: '#fff',
     fontSize: fontSizeToMS(-0.5).fontSize,
     textAlign: 'center'

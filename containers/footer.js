@@ -57,7 +57,6 @@ class Footer extends Component {
     } else {
       footer = (
         <footer className="footer" style={style.footer}>
-          <p>default footer</p>
           <Copyright meta={copyright} />
         </footer>
       );

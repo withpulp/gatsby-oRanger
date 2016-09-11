@@ -51,7 +51,7 @@ const options = {
   headerWeight: 400,
   bodyWeight: 400,
   boldWeight: 700,
-  blockMarginBottom: 0,
+  blockMarginBottom: '1.66667rem',
   overrideStyles: ({ rhythm, adjustFontSizeToMSValue }, options, styles) => ({
     'h1, h2, h3, h4, h5, h6': {
       margin: '0 auto',
