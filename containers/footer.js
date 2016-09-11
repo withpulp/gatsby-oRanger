@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
-import access from 'safe-access';
 import include from 'underscore.string/include';
+import find from 'lodash/find';
 import Copyright from 'containers/copyright';
 import Next from 'containers/next';
 import { prefixLink } from 'gatsby-helpers';
@@ -29,20 +29,12 @@ const style = {
 };
 
 class Footer extends Component {
-
   render() {
     const { location, route } = this.props;
     const copyright = {
       year: moment().year(),
       message: config.copyrightMessage
     };
-
-    // @TODO: page doesn't exists since footer is outside of route data
-    // need match location with pages array path and fetch data that way
-    const page = route.page;
-    console.log(route);
-    console.log(location.pathname);
-    console.log(route.pages);
 
     let footer;
 
@@ -53,11 +45,12 @@ class Footer extends Component {
           <Copyright meta={copyright} />
         </footer>
       );
-    // @TODO: page is undefined, find another way to check this condition
-    } else if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
+    } else if (include(location.pathname, '/blog/') || include(location.pathname, '/work/')) {
+      const page = find(route.pages, { 'path': location.pathname});
+
       footer = (
         <footer className="index footer" style={style.footer}>
-          <p>markdown footer</p>
+          <Next data={page.data} pages={route.pages}/>
           <Copyright meta={copyright} />
         </footer>
       );

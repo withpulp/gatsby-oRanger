@@ -16,6 +16,7 @@ const style = {
   },
   cta: {
     margin: 0,
+    color: '#fff',
     fontSize: fontSizeToMS(-0.5).fontSize,
     lineHeight: fontSizeToMS(-0.5).lineHeight,
     letterSpacing: -0.25
@@ -64,7 +65,7 @@ class Next extends React.Component {
       return (
         <figure className="next figure" style={style.figure}>
           <h6 className="cta" style={style.cta}>
-            More from blog:
+            Here's what's next:
           </h6>
 
           <h3 className="title" style={style.title}>
@@ -72,8 +73,6 @@ class Next extends React.Component {
               {next.data.title}
             </Link>
           </h3>
-
-          <Summary body={next.data.body}/>
         </figure>
       )
     }

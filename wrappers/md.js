@@ -64,11 +64,11 @@ class MarkdownWrapper extends Component {
 }
 
 MarkdownWrapper.propTypes = {
-    route: PropTypes.object
+  route: PropTypes.object
 };
 
 MarkdownWrapper.contextTypes = {
-    router: PropTypes.object.isRequired
+  router: PropTypes.object.isRequired
 };
 
 export default MarkdownWrapper;
