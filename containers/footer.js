@@ -40,8 +40,8 @@ class Footer extends Component {
     // @TODO: page doesn't exists since footer is outside of route data
     // need match location with pages array path and fetch data that way
     const page = route.page;
-    console.log(page);
-    console.log(location);
+    console.log(route);
+    console.log(location.pathname);
     console.log(route.pages);
 
     let footer;
@@ -53,16 +53,18 @@ class Footer extends Component {
           <Copyright meta={copyright} />
         </footer>
       );
+    // @TODO: page is undefined, find another way to check this condition
     } else if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
       footer = (
         <footer className="index footer" style={style.footer}>
-
+          <p>markdown footer</p>
           <Copyright meta={copyright} />
         </footer>
       );
     } else {
       footer = (
         <footer className="footer" style={style.footer}>
+          <p>default footer</p>
           <Copyright meta={copyright} />
         </footer>
       );

@@ -6,7 +6,8 @@ const style = {
   summary: {
 		display: 'block',
 		position: 'relative',
-    margin: '0 auto'
+    margin: '0 auto',
+    color: '#555'
   }
 };
 
@@ -22,7 +23,7 @@ class Summary extends React.Component {
 
   render() {
     return (
-			<p className="summary" ref="markdown" style={style.summary} dangerouslySetInnerHTML={{__html: this.summary(this.props.body)}}/>
+			<p className="article summary" ref="markdown" style={style.summary} dangerouslySetInnerHTML={{__html: this.summary(this.props.body)}}/>
 		);
   }
 }

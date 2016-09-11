@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router';
 import moment from 'moment';
+import Summary from 'components/summary';
 import { prefixLink } from 'gatsby-helpers';
 import { rhythm } from 'utils/typography';
 
@@ -8,12 +9,13 @@ const style = {
 	post: {
     position: 'relative',
     display: 'block',
-    marginBottom: rhythm(1 / 2)
+    marginBottom: rhythm(1)
   },
 	link: {
 		textDecoration: 'none'
 	},
 	title: {
+		margin: 0,
 		transition: 'all 250ms'
 	},
 	meta: {
@@ -36,6 +38,7 @@ class Post extends Component {
 							{moment(meta.data.date).calendar()}
 						</small>
 					</h4>
+					<Summary body={meta.data.body} />
 				</Link>
 			</li>
 		);
