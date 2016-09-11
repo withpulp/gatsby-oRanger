@@ -19,7 +19,8 @@ const style = {
   title: {
     margin: '0 auto',
     color: '#e76600',
-    fontFamily: 'Montserrat, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif'
+    fontFamily: 'Montserrat, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
+    transition: 'opacity 500ms ease'
   },
   meta: {
 		display: 'block',
@@ -29,6 +30,20 @@ const style = {
 };
 
 class Hero extends Component {
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll(event) {
+    // @TODO: use existing react packages to solve this issue
+    // ref: https://github.com/fisshy/react-scroll
+    // ref: https://github.com/gilbox/react-track
+  }
+
   render() {
     const { meta, route } = this.props;
     const page = route.page;
