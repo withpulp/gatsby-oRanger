@@ -3,10 +3,9 @@ import React, { Component, PropTypes } from 'react';
 import Header from '../containers/header';
 import Footer from '../containers/footer';
 
-// @TODO: inject css as javascript (reference utils/typography)
-import 'css/elements.css';
-import 'css/states.css';
-import 'css/animations.css';
+import 'stylesheets/elements.css';
+import 'stylesheets/states.css';
+import 'stylesheets/animations.css';
 
 const style = {
   template: {
