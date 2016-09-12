@@ -39,9 +39,13 @@ class Hero extends Component {
   }
 
   handleScroll(event) {
-    // @TODO: use existing react packages to solve this issue
-    // ref: https://github.com/fisshy/react-scroll
-    // ref: https://github.com/gilbox/react-track
+    // @TODO: reduce opacity of title to 0 as scrolling down to bottom of hero
+    // no jquery, try to do this with js only
+    let scrollTop = event.srcElement.body.scrollTop,
+        itemTranslate = Math.min(0, scrollTop/3 - 60);
+
+    console.log(scrollTop);
+    console.log(itemTranslate);
   }
 
   render() {
