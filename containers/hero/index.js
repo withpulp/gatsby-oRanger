@@ -2,7 +2,10 @@ import React, { Component, PropTypes } from 'react';
 import access from 'safe-access';
 import include from 'underscore.string/include';
 import { prefixLink } from 'gatsby-helpers';
+import { config } from 'config';
 import { rhythm } from 'utils/typography';
+
+import 'containers/hero/index.css';
 
 const style = {
   hero: {
@@ -30,6 +33,14 @@ const style = {
 };
 
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      scrolling: false
+    }
+  }
+
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
   }
@@ -62,15 +73,20 @@ class Hero extends Component {
     if (page.path === prefixLink('/')) {
       hero = (
         <section className="index hero section" style={style.hero}>
-          <h1 className="title" style={style.title}>{meta.title}</h1>
+          <h1 className="title" style={style.title}>
+            {config.siteTitle}
+            <small className="sub description">
+              {config.siteDescription}
+            </small>
+          </h1>
         </section>
       );
     } else if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
       hero = (
-        <section className="hero section" style={style.hero}>
+        <section className="markdown hero section" style={style.hero}>
           <h2 className="title" style={style.title}>
             {meta.title}
-            <small className="meta date" style={style.meta}>
+            <small className="sub meta date" style={style.meta}>
               {meta.date}
             </small>
           </h2>
@@ -79,7 +95,9 @@ class Hero extends Component {
     } else {
       hero = (
         <section className="hero section" style={style.hero}>
-          <h2 className="title" style={style.title}>{meta.title}</h2>
+          <h2 className="title" style={style.title}>
+            {meta.title}
+          </h2>
         </section>
       );
     }

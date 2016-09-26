@@ -38,9 +38,9 @@ class Template extends Component {
     return (
       <main className="main template" style={style.template}>
         <Header location={location} route={route}/>
-        <section className="main content" style={style.content}>
+        <main className="main content" style={style.content}>
           {children}
-        </section>
+        </main>
         <Footer location={location} route={route}/>
       </main>
     );
