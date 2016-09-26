@@ -3,7 +3,6 @@ import DocumentTitle from 'react-document-title';
 import Hero from 'containers/hero/';
 import Work from 'containers/work/';
 import Blog from 'containers/blog/';
-import social from 'constants/social';
 import { rhythm } from 'utils/typography';
 import { config } from 'config';
 
