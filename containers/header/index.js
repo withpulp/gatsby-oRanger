@@ -17,7 +17,7 @@ class Header extends Component {
         <header className="index header">
           <Headroom disableInlineStyles>
             <Link className="link" to={prefixLink('/')}>
-              <img className="logo image" src={prefixLink('/logo.png')} />
+              <img className="logo image" src={prefixLink('/images/logo.png')} />
             </Link>
           </Headroom>
         </header>
@@ -28,7 +28,7 @@ class Header extends Component {
         <header className="header">
           <Headroom disableInlineStyles>
             <Link className="link" to={prefixLink('/')}>
-              <img className="logo image" src={prefixLink('/logo.png')} />
+              <img className="logo image" src={prefixLink('/images/logo.png')} />
             </Link>
           </Headroom>
         </header>

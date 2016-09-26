@@ -1,6 +1,6 @@
 ---
 title: Hello Barcelona
-date: "2016-09-9T13:34:12"
+date: "2016-09-09T13:34:12"
 layout: post
 readNext: "/blog/hello_ny"
 path: "/blog/hello_barcelona"
