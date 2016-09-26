@@ -1,7 +1,7 @@
 {
   "name": "gatsby-oranger",
   "description": "With Pulp oRanger gatsby scaffold",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",

@@ -8,24 +8,7 @@ import Summary from 'components/summary';
 import { rhythm, fontSizeToMS } from 'utils/typography';
 import { getTags } from 'utils';
 
-const style = {
-  figure: {
-    position: 'relative',
-    margin: `${rhythm(2)} auto`,
-    padding: rhythm(1 / 2)
-  },
-  cta: {
-    margin: 0,
-    color: '#fff',
-    fontSize: fontSizeToMS(-0.5).fontSize,
-    lineHeight: fontSizeToMS(-0.5).lineHeight,
-    letterSpacing: -0.25
-  },
-  title: {
-    marginTop: 0,
-    marginBottom: rhythm(1 / 2)
-  }
-};
+import 'containers/next/index.css';
 
 // @TODO: swipe for mobile integrated with router
 
@@ -63,13 +46,13 @@ class Next extends React.Component {
       next = find(pages, (page) => includes(page.path, readNext.slice(1, -1)));
 
       return (
-        <figure className="next figure" style={style.figure}>
-          <h6 className="cta" style={style.cta}>
+        <figure className="next figure">
+          <h6 className="cta">
             Here's what's next:
           </h6>
 
-          <h3 className="title" style={style.title}>
-            <Link to={{  pathname: prefixLink(next.path)}}>
+          <h3 className="title">
+            <Link className="link" to={{pathname: prefixLink(next.path)}}>
               {next.data.title}
             </Link>
           </h3>

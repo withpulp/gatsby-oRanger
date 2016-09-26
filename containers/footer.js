@@ -3,7 +3,7 @@ import moment from 'moment';
 import include from 'underscore.string/include';
 import find from 'lodash/find';
 import Copyright from 'containers/copyright';
-import Next from 'containers/next';
+import Next from 'containers/next/';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
 
