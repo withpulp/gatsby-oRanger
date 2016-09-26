@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import HeartIcon from 'react-icons/lib/fa/heart';
 import { rhythm, fontSizeToMS } from 'utils/typography';
 
 class Copyright extends Component {

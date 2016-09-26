@@ -1,0 +1,25 @@
+/* featured projects list */
+.work.section .featured.projects.list {
+	margin: 0 auto;
+}
+
+/* featured project item */
+.work.section .featured.projects.list .project.item {
+	flex: none;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.work.section .featured.projects.list .project.item .project.link {
+	text-decoration: none;
+}
+
+.work.section .featured.projects.list .project.item .project.link .title {
+	transition: all 250ms;
+}
+
+/* featured project link hover title state */
+.work.section .featured.projects.list .project.item .project.link:hover .title {
+	color: #e76600;
+}

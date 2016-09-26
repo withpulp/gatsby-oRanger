@@ -30,7 +30,7 @@ class Footer extends Component {
     } else {
       footer = (
         <footer className="footer">
-          <h6 className="title">Version: {config.siteVersion}</h6>
+          <h1 className="title">Version: {config.siteVersion}</h1>
           <Copyright meta={copyright} />
         </footer>
       );

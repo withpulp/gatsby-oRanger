@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 import Header from 'containers/header/';
-import Footer from 'containers/footer';
+import Footer from 'containers/footer/';
 
 import 'stylesheets/elements.css';
 import 'stylesheets/animations.css';
