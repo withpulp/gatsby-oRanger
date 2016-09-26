@@ -57,7 +57,7 @@ renderer.image = function (href, title, text) {
     } else if (title === 'desktop') {
         img = `<div class='desktop image'>${img} class='image' /></div>`;
     } else if (title) {
-        img = `<div class='image'>${img} class='image' title='${title}'/></div>`;
+        img = `<div class='hero image'>${img} class='image' title='${title}'/></div>`;
     } else {
         img = `<div class='image'>${img} class='image'/></div>`;
     }
@@ -74,10 +74,10 @@ renderer.heading = function (text, level) {
     var levelClasses;
 
     switch (level) {
-        case 1: levelClasses = 'hero heading'; break;
-        case 2: levelClasses = 'heading'; break;
-        case 3: levelClasses = 'heading'; break;
-        default: levelClasses = 'heading'; break;
+        case 1: levelClasses = 'hero title'; break;
+        case 2: levelClasses = 'figure title'; break;
+        case 3: levelClasses = 'cta title'; break;
+        default: levelClasses = 'title'; break;
     }
     if (level < 4) {
         return `<h${level} id="${name}" class='${levelClasses}'><a href="#${name}" class='Cur(d)!'>${text}</a></h${level}>`;
