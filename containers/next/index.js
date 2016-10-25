@@ -5,7 +5,6 @@ import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/find';
 import intersect from 'just-intersect';
 import Summary from 'components/summary';
-import { rhythm, fontSizeToMS } from 'utils/typography';
 import { getTags } from 'utils';
 
 import 'containers/next/index.css';

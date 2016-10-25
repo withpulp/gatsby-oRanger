@@ -3,34 +3,8 @@ import access from 'safe-access';
 import include from 'underscore.string/include';
 import { prefixLink } from 'gatsby-helpers';
 import { config } from 'config';
-import { rhythm } from 'utils/typography';
 
 import 'containers/hero/index.css';
-
-const style = {
-  hero: {
-    display: 'flex',
-    position: 'relative',
-    width: '100%',
-    height: '100vh',
-    margin: '0 auto',
-    padding: rhythm(1 / 2),
-    alignItems: 'center',
-    justifyContent: 'center',
-    textAlign: 'center'
-  },
-  title: {
-    margin: '0 auto',
-    color: '#e76600',
-    fontFamily: 'Montserrat, Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif',
-    transition: 'opacity 500ms ease'
-  },
-  meta: {
-		display: 'block',
-		color: '#777',
-		fontSize: '50%'
-	}
-};
 
 class Hero extends Component {
   constructor(props) {
@@ -72,8 +46,8 @@ class Hero extends Component {
 
     if (page.path === prefixLink('/')) {
       hero = (
-        <section className="index hero section" style={style.hero}>
-          <h1 className="title" style={style.title}>
+        <section className="index hero section">
+          <h1 className="title">
             {config.siteTitle}
             <small className="sub description">
               {config.siteDescription}
@@ -83,10 +57,10 @@ class Hero extends Component {
       );
     } else if (access(page, 'file.ext') === 'md' && !include(page.path, '/404')) {
       hero = (
-        <section className="markdown hero section" style={style.hero}>
-          <h2 className="title" style={style.title}>
+        <section className="markdown hero section">
+          <h2 className="title">
             {meta.title}
-            <small className="sub meta date" style={style.meta}>
+            <small className="sub meta date">
               {meta.date}
             </small>
           </h2>
@@ -94,8 +68,8 @@ class Hero extends Component {
       );
     } else {
       hero = (
-        <section className="hero section" style={style.hero}>
-          <h2 className="title" style={style.title}>
+        <section className="hero section">
+          <h2 className="title">
             {meta.title}
           </h2>
         </section>

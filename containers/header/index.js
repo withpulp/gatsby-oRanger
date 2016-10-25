@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react';
 import Headroom from 'react-headroom';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
-import { rhythm } from 'utils/typography';
 
 import 'containers/header/index.css';
 
