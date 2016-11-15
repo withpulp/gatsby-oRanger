@@ -44,8 +44,8 @@ const options = {
       ]
     }
   ],
-  headerFontFamily: ['Ubuntu', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
-  bodyFontFamily: ['Montserrat', 'Open Sans', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+  headerFontFamily: ['"Ubuntu"', '"Open Sans"', '"Helvetica Neue"', 'Helvetica', 'Arial', 'sans-serif'],
+  bodyFontFamily: ['"Montserrat"', '"Open Sans"', '"Helvetica Neue"','Helvetica', 'Arial', 'sans-serif'],
   headerGray: 0,
   bodyGray: 0,
   headerWeight: 400,
@@ -55,8 +55,7 @@ const options = {
   overrideStyles: ({ rhythm, adjustFontSizeToMSValue }, options, styles) => ({
     'h1, h2, h3, h4, h5, h6': {
       margin: '0 auto',
-      marginBottom: rhythm(1),
-      letterSpacing: rhythm(1 / 4)
+      marginBottom: rhythm(1)
     },
     h1: {
       ...adjustFontSizeToMSValue(2)

@@ -3,6 +3,7 @@ import moment from 'moment';
 import include from 'underscore.string/include';
 import find from 'lodash/find';
 import Next from 'containers/next';
+import Quotes from 'containers/quotes';
 import Copyright from 'components/copyright';
 import { config } from 'config';
 
@@ -30,7 +31,7 @@ class Footer extends Component {
     } else {
       footer = (
         <footer className="footer">
-          <h3 className="title">Version: {config.siteVersion}</h3>
+          <Quotes />
           <Copyright meta={copyright} />
         </footer>
       );

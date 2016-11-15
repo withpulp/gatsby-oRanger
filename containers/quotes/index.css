@@ -1,0 +1,18 @@
+/* quotes container */
+.quotes.figure {
+	max-width: 30em;
+	color: #fff;
+}
+
+/* quote */
+.quotes.figure .quote {
+	display: block;
+	margin: 0 auto;
+	font-weight: 400;
+}
+
+/* quote author */
+.quotes.figure .quote .author {
+	display: block;
+	font-weight: 300;
+}

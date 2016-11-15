@@ -24,7 +24,7 @@ const style = {
     width: '100%',
     height: 'auto',
     margin: '0 auto',
-    marginBottom: '100vh',
+    marginBottom: '50vh',
     zIndex: 2,
     backgroundColor: '#fff'
   }
