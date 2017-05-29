@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import quotes from 'constants/quotes';
 import sample from 'lodash/sample';
 
-import 'containers/quotes/index.css';
+import 'components/quotes/index.css';
 
 class Quotes extends Component {
 	renderRandomQuote() {

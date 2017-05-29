@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import moment from 'moment';
 import include from 'underscore.string/include';
 import find from 'lodash/find';
-import Next from 'containers/next';
-import Quotes from 'containers/quotes';
+import Next from 'components/next';
+import Quotes from 'components/quotes';
 import Copyright from 'components/copyright';
 import { config } from 'config';
 

@@ -5,10 +5,10 @@ import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/find';
 import intersect from 'just-intersect';
 import Summary from 'components/summary';
-import Quotes from 'containers/quotes';
+import Quotes from 'components/quotes';
 import { getTags } from 'utils';
 
-import 'containers/next/index.css';
+import 'components/next/index.css';
 
 // @TODO: swipe for mobile integrated with router
 
