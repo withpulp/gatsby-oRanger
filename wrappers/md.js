@@ -17,7 +17,9 @@ const style = {
     paddingBottom: rhythm(2)
   },
   article: {
+    maxWidth: '42em',
     minHeight: '25vh',
+    margin: '0 auto',
     padding: rhythm(1 / 2)
   }
 }

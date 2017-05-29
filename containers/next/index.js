@@ -5,6 +5,7 @@ import { prune, include as includes } from 'underscore.string';
 import find from 'lodash/find';
 import intersect from 'just-intersect';
 import Summary from 'components/summary';
+import Quotes from 'containers/quotes';
 import { getTags } from 'utils';
 
 import 'containers/next/index.css';
@@ -40,7 +41,7 @@ class Next extends React.Component {
     }
 
     if (!next) {
-      return React.createElement('noscript', null)
+      return <Quotes />
     } else {
       next = find(pages, (page) => includes(page.path, readNext.slice(1, -1)));
 

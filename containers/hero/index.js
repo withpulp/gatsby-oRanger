@@ -38,9 +38,9 @@ class Hero extends Component {
     } else {
       hero = (
         <section className="hero section">
-          <h2 className="title">
+          <h1 className="title">
             {meta.title}
-          </h2>
+          </h1>
         </section>
       );
     }
