@@ -1,6 +1,6 @@
 import React from "react";
 import Helmet from "react-helmet";
-import config from "../../data/SiteConfig";
+import config from "../../data/config";
 import "./index.css";
 
 export default class MainLayout extends React.Component {
@@ -41,13 +41,16 @@ export default class MainLayout extends React.Component {
   render() {
     const { children } = this.props;
     return (
-      <div>
+      <main className="main layout">
         <Helmet>
-          <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
+          <title>{`${config.siteTitle} | ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        {children()}
-      </div>
+        
+        <main className="main content">
+          {children()}
+        </main>
+      </main>
     );
   }
 }
