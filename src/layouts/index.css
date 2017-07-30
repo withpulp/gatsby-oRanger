@@ -1,12 +1,23 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.layout .main.content {
+  flex: 1;
 }

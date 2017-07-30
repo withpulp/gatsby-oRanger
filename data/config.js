@@ -12,7 +12,7 @@ module.exports = {
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   userName: "With Pulp", // Username to display in the author segment.
-  userTwitter: "", // Optionally renders "Follow Me" in the UserInfo segment.
+  userTwitter: "_withpulp", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "New York, New York", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription: "", // User description to display in the author segment.
@@ -25,7 +25,7 @@ module.exports = {
     },
     {
       label: "Twitter",
-      url: "https://twitter.com/dvazgird",
+      url: "https://twitter.com/_withpulp",
       iconClassName: "fa fa-twitter"
     },
     {
