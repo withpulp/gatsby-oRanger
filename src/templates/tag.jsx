@@ -8,9 +8,11 @@ export default class TagTemplate extends React.Component {
     const tag = this.props.pathContext.tag;
     const postEdges = this.props.data.allMarkdownRemark.edges;
     return (
-      <div className="tag-container">
+      <div className="tag page">
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-        <PostListing postEdges={postEdges} />
+        <section className="content section">
+          <PostListing postEdges={postEdges} />
+        </section>
       </div>
     );
   }

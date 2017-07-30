@@ -21,23 +21,26 @@ export default class PostTemplate extends React.Component {
       post.category_id = config.postDefaultCategoryID;
     }
     return (
-      <div>
+      <div className="post page">
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <div>
-          <h1>
-            {post.title}
-          </h1>
-          <div dangerouslySetInnerHTML={{ __html: postNode.html }} />
+        <section className="content section">
+          <figure className="post figure">
+            <h1 className="title">
+              {post.title}
+            </h1>
+            <article className="article"
+                     dangerouslySetInnerHTML={{ __html: postNode.html }} />
+          </figure>
           <div className="post-meta">
             <PostTags tags={post.tags} />
             <SocialLinks postPath={slug} postNode={postNode} />
           </div>
           <UserInfo config={config} />
           <Disqus post={post} />
-        </div>
+        </section>
       </div>
     );
   }

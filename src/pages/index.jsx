@@ -11,7 +11,7 @@ class Index extends React.Component {
       <div className="index page">
         <Helmet title={config.siteTitle} />
         <SEO postEdges={postEdges} />
-        <section className="section">
+        <section className="content section">
           <PostListing postEdges={postEdges} />
         </section>
       </div>
