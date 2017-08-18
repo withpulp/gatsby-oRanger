@@ -44,14 +44,14 @@ class Hero extends React.Component {
     } else {
       figure = (
         <figure className="hero figure">
-          <h2 className="title">
+          <h1 className="title">
             { title }
             { caption ?
               <small className="sub">
                 { caption }
               </small>
             : null }
-          </h2>
+          </h1>
         </figure>
       );
     }
