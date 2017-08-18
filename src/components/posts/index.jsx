@@ -14,12 +14,12 @@ class Posts extends React.Component {
                 key={post.path}>
               <Link className="link"
                     to={post.path}>
-                <h3 className="title">
+                <h2 className="title">
                   {post.title}
                   <small className="sub meta">
                     {post.date}
                   </small>
-                </h3>
+                </h2>
                 <p className="excerpt">
                   {post.excerpt}
                 </p>

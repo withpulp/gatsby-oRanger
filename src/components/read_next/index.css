@@ -13,29 +13,38 @@
   text-decoration: none;
   text-align: center;
   line-height: 1;
-  transform: scale(1.25);
   transition: all 250ms ease;
 }
 
-.read.next.figure .link:hover {
-  transform: scale(2);
-}
-
 .read.next.figure .link.previous {
+  transform: scale(0.5);
   margin-bottom: 0.5em;
-  filter: blur(0.15em);
-  transform: scale(0.25);
 }
 
-.read.next.figure .link.previous:hover {
-  filter: blur(0);
-  transform: scale(0.5);
+@media only screen and (min-width: 48em) {
+  .read.next.figure .link {
+    transform: scale(1.25);
+  }
+
+  .read.next.figure .link:hover {
+    transform: scale(2);
+  }
+
+  .read.next.figure .link.previous {
+    filter: blur(0.15em);
+    transform: scale(0.25);
+  }
+
+  .read.next.figure .link.previous:hover {
+    filter: blur(0);
+    transform: scale(0.5);
+  }
 }
 
 .read.next.figure .link .label {
   display: block;
-  color: #333;
-  font-size: 50%;
+  color: #6b6773;
+  font-size: 75%;
   font-weight: normal;
   transition: all 250ms ease;
 }

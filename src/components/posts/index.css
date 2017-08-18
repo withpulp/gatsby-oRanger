@@ -1,7 +1,6 @@
 .posts.figure .list .item {
-  margin-bottom: 0;
-  padding: 1em 0;
-  border-bottom: 0.1em solid #eee6ff;
+  margin-bottom: 2em;
+  padding: 0;
 }
 
 .posts.figure .list .item:last-child {
@@ -14,9 +13,16 @@
 }
 
 .posts.figure .list .item .link .title {
-  margin-bottom: 0
+  margin-bottom: 0.5em
 }
 
-.posts.figure .list .item .link:hover .title {
-  color: #e66500;
+.posts.figure .list .item .link .title .sub {
+  margin-top: 0.15em;
+  padding-top: 0.25em;
+  border-top: 0.15em solid #6b6773;
+  transition: all 250ms;
+}
+
+.posts.figure .list .item .link:hover .title .sub {
+  border-top: 0.15em solid #e66500;
 }

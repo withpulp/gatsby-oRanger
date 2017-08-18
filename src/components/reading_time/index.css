@@ -3,6 +3,7 @@
   bottom: 0;
   right: 0;
   width: auto;
+  margin: 1em !important;
   padding: 0.25em;
   background-color: rgba(32, 26, 45, 0.75);
   color: #fff;
