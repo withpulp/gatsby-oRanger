@@ -1,12 +1,12 @@
 import Typography from 'typography';
 
 const MEDIA = {
-  MOBILE: '@media (min-width: 30em)',
-  TABLET: '@media (min-width: 48em)',
-  LAPTOP: '@media (min-width: 62em)',
-  DISPLAY: '@media (min-width: 75em)',
-  DISPLAY_L: '@media (min-width: 100em)',
-  DISPLAY_XL: '@media (min-width: 125em)'
+  MOBILE: '@media only screen and (min-width: 30em)',
+  TABLET: '@media only screen and (min-width: 48em)',
+  LAPTOP: '@media only screen and (min-width: 62em)',
+  DISPLAY: '@media only screen and (min-width: 75em)',
+  DISPLAY_L: '@media only screen and (min-width: 100em)',
+  DISPLAY_XL: '@media only screen and (min-width: 125em)'
 };
 
 const options = {
@@ -48,24 +48,6 @@ const options = {
         position: 'relative',
         marginBottom: '1em',
         lineHeight: 1
-      },
-      h1: {
-        
-      },
-      h2: {
-
-      },
-      h3: {
-
-      },
-      h4: {
-
-      },
-      h5: {
-
-      },
-      h6: {
-
       },
       a: {
         color: '#e66500',
