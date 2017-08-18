@@ -59,6 +59,9 @@ query BlogPostBySlug($slug: String!) {
       previous
       next
     }
+    fields {
+      slug
+    }
   }
 }
 `;

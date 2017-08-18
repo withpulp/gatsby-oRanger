@@ -34,5 +34,7 @@ module.exports = {
       iconClassName: "fa fa-envelope"
     }
   ],
-  copyright: "Copyright © 2017. With Pulp" // Copyright string for the footer of the website and RSS feed.
+  copyright: "Copyright © 2017. With Pulp", // Copyright string for the footer of the website and RSS feed.
+  themeColor: "#e66500", // Used for setting manifest and progress theme colors.
+  backgroundColor: "#fff" // Used for setting manifest background color.
 };

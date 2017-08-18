@@ -10,6 +10,7 @@ import './index.css';
 class Article extends React.Component {
 	render() {
     const post = this.props.data;
+		const tags = post.frontmatter.tags;
     const slug = this.props.slug;
     if (!post.id) {
       post.id = this.props.location.pathname;
@@ -21,8 +22,8 @@ class Article extends React.Component {
 		return (
       <section className="article section">
         <Post post={post} />
-        <Tags tags={post.frontmatter.tags} />
-        <Disqus post={post.frontmatter} />
+        <Tags tags={tags} />
+        <Disqus post={post} />
         <SocialShare postPath={slug} postNode={post} />
 				<ReadingTime time={post.timeToRead} />
       </section>

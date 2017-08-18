@@ -24,6 +24,9 @@ class Disqus extends Component {
   }
   render() {
     const { post } = this.props;
+    const title = post.frontmatter.title;
+    const categoryId = post.frontmatter.category_id;
+    const url = config.siteUrl + config.pathPrefix + post.fields.slug;
     if (!config.disqusShortname) {
       return null;
     }
@@ -31,10 +34,10 @@ class Disqus extends Component {
       <figure className="comments figure">
         <ReactDisqusComments className="disqus"
                              shortname={config.disqusShortname}
-                             identifier={post.id}
-                             title={post.title}
-                             url={post.url}
-                             category_id={post.category_id}
+                             identifier={title}
+                             title={title}
+                             url={url}
+                             category_id={categoryId}
                              onNewComment={this.notifyAboutComment} />
       </figure>
     );

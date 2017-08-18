@@ -19,7 +19,7 @@
 .posts.figure .list .item .link .title .sub {
   margin-top: 0.15em;
   padding-top: 0.25em;
-  border-top: 0.15em solid #6b6773;
+  border-top: 0.15em solid #eee6ff;
   transition: all 250ms;
 }
 
