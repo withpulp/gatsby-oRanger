@@ -8,7 +8,7 @@ class Posts extends React.Component {
 
     return (
       <figure className="posts figure">
-        <ul className="flex list">
+        <ul className="unstyled list">
           {posts.map(post => (
             <li className="item"
                 key={post.path}>

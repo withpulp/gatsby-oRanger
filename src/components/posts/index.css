@@ -1,19 +1,20 @@
 .posts.figure .list .item {
-  flex: none;
-  width: 100%;
   margin-bottom: 0;
-  padding: 1em;
+  padding: 1em 0;
+  border-bottom: 0.1em solid #eee6ff;
 }
 
-@media only screen and (min-width: 62em) {
-  .posts.figure .list .item {
-    width: 33.3333%;
-  }
+.posts.figure .list .item:last-child {
+  border-bottom: 0;
 }
 
 .posts.figure .list .item .link {
   color: #4d4b52;
   text-decoration: none;
+}
+
+.posts.figure .list .item .link .title {
+  margin-bottom: 0
 }
 
 .posts.figure .list .item .link:hover .title {
