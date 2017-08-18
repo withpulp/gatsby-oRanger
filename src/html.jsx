@@ -1,29 +1,34 @@
-/* eslint import/no-unresolved:"off" */
-/* eslint import/extensions:"off" */
-/* eslint global-require:"off" */
-import React from "react";
-import favicon from "./favicon.png";
+import React, { Component } from 'react';
+import { TypographyStyle, GoogleFont } from 'react-typography';
+import favicon from '!file-loader!./favicon.png';
+import * as PropTypes from 'prop-types';
+import typography from './utils/typography';
 
-let inlinedStyles = "";
-if (process.env.NODE_ENV === "production") {
+let stylesStr
+if (process.env.NODE_ENV === `production`) {
   try {
-    /* eslint import/no-webpack-loader-syntax: off */
-    inlinedStyles = require("!raw-loader!../public/styles.css");
+    stylesStr = require(`!raw-loader!../public/styles.css`)
   } catch (e) {
-    /* eslint no-console: "off"*/
-    console.log(e);
+    console.log(e)
   }
 }
 
-export default class HTML extends React.Component {
+const propTypes = {
+  headComponents: PropTypes.node.isRequired,
+  body: PropTypes.node.isRequired,
+  postBodyComponents: PropTypes.node.isRequired,
+}
+
+class Html extends Component {
   render() {
-    let css;
-    if (process.env.NODE_ENV === "production") {
+    let css
+    if (process.env.NODE_ENV === `production`) {
       css = (
         <style id="gatsby-inlined-css"
-               dangerouslySetInnerHTML={{ __html: inlinedStyles }} />
-      );
+               dangerouslySetInnerHTML={{ __html: stylesStr }} />
+      )
     }
+
     return (
       <html lang="en">
         <head>
@@ -31,7 +36,13 @@ export default class HTML extends React.Component {
           <meta name="viewport"
                 content="width=device-width, initial-scale=1.0" />
           {this.props.headComponents}
-          <link rel="shortcut icon" href={favicon} />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="description"
+                content="With Pulp Gatsby Starter" />
+          <link rel="icon" type="image/png" href={favicon} />
+          <title>oRanger</title>
+          <GoogleFont typography={typography}/>
+          <TypographyStyle typography={typography} />
           {css}
         </head>
         <body>
@@ -41,6 +52,10 @@ export default class HTML extends React.Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    );
+    )
   }
 }
+
+Html.propTypes = propTypes
+
+module.exports = Html

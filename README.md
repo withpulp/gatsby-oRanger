@@ -1,14 +1,13 @@
-<div align="center">
-    <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
-</div>
+<img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
+![logo](static/logos/logo-1024.png)
 
 # Gatsby oRanger
 
-A blog starter skeleton with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/). Built on [Gatsby Advanced Starter](https://github.com/Vagr9K/gatsby-advanced-starter)
+A static site starter with advanced features for [Gatsby](https://github.com/gatsbyjs/gatsby/). Built on [Gatsby-Advanced-Starter](https://github.com/Vagr9K/gatsby-advanced-starter)
 
 ## Why?
 
-This project aims to provide a minimal for building GatsbyJS powered blogs.
+This project aims to provide a minimal for building GatsbyJS powered static sites.
 
 It doesn't define any UI limitations in any way, and only gives you the basic components for SEO/Social Media/etc.
 
@@ -20,9 +19,9 @@ NOTE: This project is a stripped down version of [Gatsby Material Starter](https
 
 If you are a newcomer to Gatsby who's interested in the implementations of most needed features, this is a great place to start.
 
-If you are interested in a foundation for bulding ultra-fast websites, you can use this project as a "minimal" starter.
+If you are interested in a foundation for building ultra-fast websites, you can use this project as a "minimal" starter.
 
-[Demo website.](https://vagr9k.github.io/gatsby-advanced-starter/)
+[Demo website.](https://withpulp.github.io/gatsby-oRanger/)
 
 ## Features
 
@@ -69,22 +68,13 @@ If you are interested in a foundation for bulding ultra-fast websites, you can u
 * Loading progress for slow networks
 * Offline support
 * Web App Manifest support
-* Development tools
-  * ESLint for linting
-  * Prettier for code style
-  * Remark-Lint for linting Markdown
-  * write-good for linting English prose
-  * gh-pages for deploying to GitHub pages
-  * CodeClimate configuration file and badge
-
-NOTE: Feel free to check out [Gatsby Material Starter](https://github.com/Vagr9K/gatsby-material-starter) if you are insterested in a more opionated starter with Material Design in mind.
 
 ## Getting Started
 
 Install this starter (assuming [Gatsby](https://github.com/gatsbyjs/gatsby/) is installed) by running from your CLI:
 
 ```sh
-gatsby new YourProjectName https://github.com/Vagr9K/gatsby-advanced-starter
+gatsby new YourProjectName https://github.com/withpulp/gatsby-oRanger
 npm run serve
 ```
 
@@ -93,7 +83,7 @@ Or you can fork the project, make your changes there and merge new features when
 Alternatively:
 
 ```sh
-git clone https://github.com/Vagr9K/gatsby-advanced-starter YourProjectName # Clone the project
+git clone https://github.com/withpulp/gatsby-oRanger YourProjectName # Clone the project
 cd YourProjectname
 rm -rf .git # So you can have your own changes stored in VCS.
 npm install # or yarn
@@ -107,40 +97,40 @@ npm run serve
  ```js
 module.exports = {
   blogPostDir: 'sample-posts', // The name of directory that contains your posts.
-  siteTitle: 'Gatsby Advanced Starter', // Site title.
-  siteTitleAlt: 'GatsbyJS Advanced Starter', // Alternative site title for SEO.
+  siteTitle: 'oRanger', // Site title.
+  siteTitleAlt: 'GatsbyJS oRanger', // Alternative site title for SEO.
   siteLogo: '/logos/logo-1024.png', // Logo used for SEO and manifest.
-  siteUrl: 'https://vagr9k.github.io', // Domain of your website without pathPrefix.
-  pathPrefix: '/gatsby-advanced-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
-  siteDescription: 'A blog starter skeleton with advanced features for for GatsbyJS', // Website description used for RSS feeds/meta description tag.
+  siteUrl: 'https://withpulp.github.io', // Domain of your website without pathPrefix.
+  pathPrefix: '/gatsby-oRanger', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+  siteDescription: 'A GatsbyJS stater with Advanced design in mind.', // Website description used for RSS feeds/meta description tag.
   siteRss: '/rss.xml', // Path to the RSS file.
   siteFBAppID: '1825356251115265', // FB Application ID for using app insights
   disqusShortname: 'https-vagr9k-github-io-gatsby-advanced-starter', // Disqus shortname.
   postDefaultCategoryID: 'Tech', // Default category for posts.
-  userName: 'Advanced User', // Username to display in the author segment.
+  userName: 'With Pulp', // Username to display in the author segment.
   userTwitter: '', // Optionally renders "Follow Me" in the UserInfo segment.
-  userLocation: 'North Pole, Earth', // User location to display in the author segment.
+  userLocation: 'New York, New York', // User location to display in the author segment.
   userAvatar: 'https://api.adorable.io/avatars/150/test.png', // User avatar to display in the author segment.
-  userDescription: "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.", // User description to display in the author segment.
+  userDescription: "", // User description to display in the author segment.
   // Links to social profiles/projects you want to display in the author segment/navigation bar.
   userLinks: [
     {
       label: 'GitHub',
-      url: 'https://github.com/Vagr9K/gatsby-advanced-starter',
+      url: 'https://github.com/withpulp/gatsby-oRanger',
       iconClassName: 'fa fa-github',
     },
     {
       label: 'Twitter',
-      url: 'https://twitter.com/Vagr9K',
+      url: 'https://twitter.com/_withpulp',
       iconClassName: 'fa fa-twitter',
     },
     {
       label: 'Email',
-      url: 'mailto:vagr9k@gmail.com',
+      url: 'mailto:damir@withpulp.com',
       iconClassName: 'fa fa-envelope',
     },
   ],
-  copyright: 'Copyright © 2017. Advanced User', // Copyright string for the footer of the website and RSS feed.
+  copyright: 'Copyright © 2017. With Pulp', // Copyright string for the footer of the website and RSS feed.
 
 };
  ```
@@ -149,7 +139,7 @@ module.exports = {
  ```js
  module.exports = {
   // Note: it must *not* have a trailing slash.
-       pathPrefix: '/gatsby-advanced-starter', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+       pathPrefix: '/gatsby-oRanger', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
 }
 
  ```

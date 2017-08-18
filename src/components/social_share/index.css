@@ -1,0 +1,18 @@
+.social.share.figure {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.social.share.figure > div {
+  margin: 1em;
+  cursor: pointer;
+}
+
+.share-count {
+  text-align: center;
+}

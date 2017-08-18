@@ -1,0 +1,21 @@
+.tags.figure {
+  margin-top: 1.83333em;
+}
+
+.tags.figure .tag.button {
+  display: inline-block;
+  margin-right: 0.5em;
+  padding: 0.5em;
+  outline: none;
+  border: solid #e66500;
+  background-color: #e66500;
+  color: #fff;
+  font-size: 50%;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.tags.figure .tag.button:hover {
+  background-color: #fff;
+  color: #e66500;
+}

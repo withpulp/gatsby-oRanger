@@ -1,0 +1,58 @@
+/* hero section */
+.hero.section {
+  display: flex;
+  min-height: 25vh;
+  margin-bottom: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  z-index: 1;
+}
+
+.hero.section .hero.figure {
+  flex: none;
+  align-self: flex-end;
+  padding: 0;
+}
+
+.hero.section .hero.figure .title {
+  text-transform: capitalize;
+}
+
+.hero.section .hero.figure .title .sub {
+  display: block;
+  font-size: 50%;
+  text-transform: uppercase;
+}
+
+/* index hero */
+.index.hero.section .hero.figure .title {
+  color: #e66500;
+  text-transform: inherit;
+}
+
+/* post hero */
+.post.hero.section .hero.figure .title .sub {
+  margin-top: 0.15em;
+  padding-top: 0.25em;
+  border-top: 0.15em solid #e66500;
+}
+
+.post.hero.section .hero.figure .title .category {
+  position: absolute;
+  top: -3.25em;
+  right: 0;
+  padding: 0.5em;
+  border: 0.15em solid #e66500;
+  background-color: #e66500;
+  color: #fff;
+  font-size: 50%;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 250ms;
+}
+
+.post.hero.section .hero.figure .title .category:hover {
+  background-color: transparent;
+  color: #e66500;
+}

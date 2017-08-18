@@ -1,0 +1,23 @@
+.reading.time.figure {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  padding: 0.25em;
+  background-color: rgba(32, 26, 45, 0.75);
+  color: #fff;
+  font-size: 75%;
+  text-align: center;
+}
+
+.reading.time.figure .caption {
+  margin: 0;
+  line-height: 1;
+}
+
+.reading.time.figure .caption .label {
+  display: block;
+  color: #e66500;
+  font-size: 50%;
+  text-transform: uppercase;
+}

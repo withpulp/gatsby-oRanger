@@ -1,17 +1,17 @@
-import React from "react";
-import Helmet from "react-helmet";
-import UserInfo from "../components/UserInfo/UserInfo";
-import Disqus from "../components/Disqus/Disqus";
-import PostTags from "../components/PostTags/PostTags";
-import SocialLinks from "../components/SocialLinks/SocialLinks";
-import SEO from "../components/SEO/SEO";
-import config from "../../data/config";
-import "./b16-tomorrow-dark.css";
-import "./post.css";
+import _ from 'lodash';
+import React from 'react';
+import Helmet from 'react-helmet';
+import Link from 'gatsby-link';
+import SEO from '../components/seo/';
+import Hero from '../containers/hero/';
+import Article from '../containers/article';
+import Affixed from '../containers/affixed';
+import config from '../../data/SiteConfig';
 
 export default class PostTemplate extends React.Component {
   render() {
     const { slug } = this.props.pathContext;
+    const location = this.props.location;
     const postNode = this.props.data.markdownRemark;
     const post = postNode.frontmatter;
     if (!post.id) {
@@ -20,46 +20,45 @@ export default class PostTemplate extends React.Component {
     if (!post.id) {
       post.category_id = config.postDefaultCategoryID;
     }
+    const hero = {
+      type: 'post',
+      title: post.title,
+      caption: post.date,
+      category: post.category
+    }
+
     return (
-      <div className="post page">
+      <div className="post template">
         <Helmet>
           <title>{`${post.title} | ${config.siteTitle}`}</title>
         </Helmet>
         <SEO postPath={slug} postNode={postNode} postSEO />
-        <section className="content section">
-          <figure className="post figure">
-            <h1 className="title">
-              {post.title}
-            </h1>
-            <article className="article"
-                     dangerouslySetInnerHTML={{ __html: postNode.html }} />
-          </figure>
-          <div className="post-meta">
-            <PostTags tags={post.tags} />
-            <SocialLinks postPath={slug} postNode={postNode} />
-          </div>
-          <UserInfo config={config} />
-          <Disqus post={post} />
-        </section>
+        <div className="post page">
+          <Hero data={hero} />
+          <Article data={postNode} location={location} slug={slug} />
+          <Affixed data={postNode} location={location} type="bottom" />
+        </div>
       </div>
+
     );
   }
 }
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
-    markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
-      timeToRead
-      excerpt
-      frontmatter {
-        title
-        cover
-        date
-        category
-        tags
-      }
+query BlogPostBySlug($slug: String!) {
+  markdownRemark(fields: { slug: { eq: $slug }}) {
+    html
+    timeToRead
+    excerpt
+    frontmatter {
+      title
+      date
+      category
+      tags
+      previous
+      next
     }
   }
+}
 `;

@@ -1,18 +1,24 @@
-import React from "react";
-import Helmet from "react-helmet";
-import PostListing from "../components/PostListing/PostListing";
-import config from "../../data/config";
+import React from 'react';
+import Helmet from 'react-helmet';
+import Hero from '../containers/hero/';
+import Blog from '../containers/blog/';
+import config from '../../data/SiteConfig';
 
 export default class TagTemplate extends React.Component {
   render() {
     const tag = this.props.pathContext.tag;
-    const postEdges = this.props.data.allMarkdownRemark.edges;
+    const hero = {
+      title: tag
+    };
+    const posts = this.props.data.allMarkdownRemark.edges;
+
     return (
-      <div className="tag page">
+      <div className="tag template">
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
-        <section className="content section">
-          <PostListing postEdges={postEdges} />
-        </section>
+        <div className="tag page">
+          <Hero data={hero} />
+          <Blog posts={posts} />
+        </div>
       </div>
     );
   }
@@ -20,11 +26,11 @@ export default class TagTemplate extends React.Component {
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query TagPage($tag: String) {
-    allMarkdownRemark(
+query TagPage($tag: String) {
+  allMarkdownRemark(
       limit: 1000
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { tags: { in: [$tag] } } }
+      sort: { fields: [frontmatter___date], order: DESC },
+      filter: { frontmatter: { tags: { in: [$tag] }} }
     ) {
       totalCount
       edges {
@@ -37,11 +43,10 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tags
-            cover
             date
           }
         }
       }
     }
-  }
+}
 `;

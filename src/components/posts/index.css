@@ -1,0 +1,21 @@
+.posts.figure .list .item {
+  flex: none;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 1em;
+}
+
+@media only screen and (min-width: 62em) {
+  .posts.figure .list .item {
+    width: 33.3333%;
+  }
+}
+
+.posts.figure .list .item .link {
+  color: #4d4b52;
+  text-decoration: none;
+}
+
+.posts.figure .list .item .link:hover .title {
+  color: #e66500;
+}
