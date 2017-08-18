@@ -143,6 +143,7 @@
 .button {
 	display: block;
 	position: relative;
+	cursor: pointer;
 	margin: 0 auto;
 	margin-bottom: 1em;
 	padding: 1em;
@@ -165,6 +166,11 @@
 	background-color: #cf3c44;
 	border-color: #cf3c44;
 	color: #fff;
+}
+
+.button.transparent {
+	border: 0;
+	background-color: transparent;
 }
 
 code[class*="language-"],

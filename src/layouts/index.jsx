@@ -7,6 +7,15 @@ import '../../css/_elements.css';
 import './index.css';
 
 export default class MainLayout extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.handleMenuState = this.handleMenuState.bind(this)
+    this.state = {
+      menu: ''
+    }
+  }
+
   getLocalTitle() {
     function capitalize(string) {
       return string.charAt(0).toUpperCase() + string.slice(1);
@@ -33,16 +42,25 @@ export default class MainLayout extends React.Component {
     }
     return title;
   }
+
+  handleMenuState() {
+    if (this.state.menu === ''){
+      this.setState({menu: 'navigating'});
+    } else {
+      this.setState({menu: ''});
+    }
+  }
+
   render() {
     const { location, children } = this.props;
 
     return (
-      <main className="main layout">
+      <main className={`${this.state.menu} main layout`}>
         <Helmet>
           <title>{`${config.siteTitle} |  ${this.getLocalTitle()}`}</title>
           <meta name="description" content={config.siteDescription} />
         </Helmet>
-        <Header />
+        <Header location={location} action={this.handleMenuState} />
         <main className="main content">
           {children()}
         </main>
