@@ -5,11 +5,10 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  padding: 1em;
 }
 
 .social.share.figure > div {
-  margin: 1em;
+  margin: 0.5em;
   cursor: pointer;
 }
 
