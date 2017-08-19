@@ -10,7 +10,10 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     const parsedFilePath = path.parse(fileNode.relativePath);
     if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')
       && Object.prototype.hasOwnProperty.call(node.frontmatter, 'slug')) {
-      slug = `/${node.frontmatter.slug}`;
+      slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+    } if (Object.prototype.hasOwnProperty.call(node, 'frontmatter')
+      && Object.prototype.hasOwnProperty.call(node.frontmatter, 'title')) {
+      slug = `/${_.kebabCase(node.frontmatter.title)}`;
     } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
       slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
     } else if (parsedFilePath.dir === '') {
@@ -18,6 +21,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
+    
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
