@@ -29,9 +29,7 @@ export default class PostTemplate extends React.Component {
 
     return (
       <div className="post template">
-        <Helmet>
-          <title>{`${post.title} | ${config.siteTitle}`}</title>
-        </Helmet>
+        <Helmet title={`${post.title} | ${config.siteTitle}`} />
         <SEO postPath={slug} postNode={postNode} postSEO />
         <div className="post page">
           <Hero data={hero} />
