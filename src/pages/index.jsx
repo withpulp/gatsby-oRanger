@@ -9,7 +9,6 @@ import config from '../../data/SiteConfig';
 class Index extends React.Component {
   render() {
     const content = this.props.data.allMarkdownRemark.edges;
-    const posts = [];
     const hero = {
       type: 'index',
       title: config.siteTitle,
@@ -17,6 +16,7 @@ class Index extends React.Component {
     };
 
     // @TODO: filter out post types through graphQL
+    let posts = [];
     content.forEach((item) => {
       if (_.includes(item.node.frontmatter.type, 'post')) {
         posts.push(item);

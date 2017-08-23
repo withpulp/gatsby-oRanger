@@ -21,7 +21,7 @@ exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
     } else {
       slug = `/${parsedFilePath.dir}/`;
     }
-    
+
     createNodeField({ node, name: 'slug', value: slug });
   }
 };
@@ -41,6 +41,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             edges {
               node {
                 frontmatter {
+                  type
                   tags
                   category
                 }
@@ -72,13 +73,15 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             categorySet.add(edge.node.frontmatter.category);
           }
 
-          createPage({
-            path: edge.node.fields.slug,
-            component: postPage,
-            context: {
-              slug: edge.node.fields.slug,
-            },
-          });
+          if (edge.node.frontmatter.type === 'post') {
+            createPage({
+              path: edge.node.fields.slug,
+              component: postPage,
+              context: {
+                slug: edge.node.fields.slug,
+              },
+            });
+          }
         });
 
         const tagList = Array.from(tagSet);
