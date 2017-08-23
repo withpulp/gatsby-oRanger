@@ -13,7 +13,7 @@ class Index extends React.Component {
       title: config.siteTitle,
       caption: config.siteDescription
     };
-    
+
     return (
       <div className="index page">
         <Helmet title={`${config.siteTitle} | ${config.siteDescription}`} />

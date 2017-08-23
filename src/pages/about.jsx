@@ -14,6 +14,7 @@ class AboutIndex extends React.Component {
     // @TODO: get about page data
     // from content/pages/about.md
     // using graphql
+    console.log(this.props.data);
 
     return (
       <div className="about page">
@@ -31,3 +32,19 @@ class AboutIndex extends React.Component {
 }
 
 export default AboutIndex;
+
+/* eslint no-undef: "off"*/
+export const pageQuery = graphql`
+  query AboutQuery {
+  allMarkdownRemark {
+    edges {
+      node {
+        html
+        frontmatter {
+          title
+        }
+      }
+    }
+  }
+}
+`;
