@@ -8,16 +8,20 @@ import config from '../../data/SiteConfig';
 
 class Index extends React.Component {
   render() {
-    const posts = this.props.data.allMarkdownRemark.edges;
+    const content = this.props.data.allMarkdownRemark.edges;
+    const posts = [];
     const hero = {
       type: 'index',
       title: config.siteTitle,
       caption: config.siteDescription
     };
-    const test = _.filter(this.props.data.allMarkdownRemark.edges, {type: 'post'});
-    console.log(test);
 
-    console.log(this.props.data);
+    // @TODO: filter out post types through graphQL
+    content.forEach((item) => {
+      if (_.includes(item.node.frontmatter.type, 'post')) {
+        posts.push(item);
+      }
+    });
 
     return (
       <div className="index page">
@@ -48,6 +52,7 @@ export const pageQuery = graphql`
         timeToRead
         frontmatter {
           title
+          type
           category
           tags
           date

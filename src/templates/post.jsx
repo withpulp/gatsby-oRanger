@@ -52,6 +52,7 @@ query BlogPostBySlug($slug: String!) {
     frontmatter {
       title
       date
+      type
       category
       tags
       previous

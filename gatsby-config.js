@@ -146,6 +146,7 @@ module.exports = {
                     frontmatter {
                       title
                       date
+                      type
                       category
                       tags
                     }
