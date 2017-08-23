@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React from 'react';
 import Helmet from 'react-helmet';
 import Hero from '../containers/hero/';
@@ -13,6 +14,10 @@ class Index extends React.Component {
       title: config.siteTitle,
       caption: config.siteDescription
     };
+    const test = _.filter(this.props.data.allMarkdownRemark.edges, {type: 'post'});
+    console.log(test);
+
+    console.log(this.props.data);
 
     return (
       <div className="index page">

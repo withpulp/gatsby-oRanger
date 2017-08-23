@@ -4,6 +4,7 @@ date: "2016.07.31"
 previous: "astronomy-compels-the-soul-to-look-upward"
 next: "you-have-seen-four-beautiful-sunsets"
 slug: "do-things-that-have-never-been-done-before"
+type: "post"
 category: "Astronomy"
 tags:
   - engineering

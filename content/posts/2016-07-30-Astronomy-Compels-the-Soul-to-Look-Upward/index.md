@@ -4,6 +4,7 @@ date: "2016.07.30"
 previous: "you-have-seen-four-beautiful-sunsets"
 next: "do-things-that-have-never-been-done-before"
 slug: "astronomy-compels-the-soul-to-look-upward"
+type: "post"
 category: "Astronomy"
 tags:
   - mathematics

@@ -1,6 +1,6 @@
 ---
 title: "About"
-slug: "about"
+type: "page"
 ---
 
 Here men from the planet Earth first set foot upon the Moon. July 1969 AD. We came in peace for all mankind.

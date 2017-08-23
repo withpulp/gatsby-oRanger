@@ -4,6 +4,7 @@ date: "2016.08.14"
 previous: "do-things-that-have-never-been-done-before"
 next: "astronomy-compels-the-soul-to-look-upward"
 slug: "you-have-seen-four-beautiful-sunsets"
+type: "post"
 category: "Science Fiction"
 tags:
   - utopia

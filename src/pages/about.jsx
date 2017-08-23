@@ -36,10 +36,11 @@ export default AboutIndex;
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
   query AboutQuery {
-  allMarkdownRemark {
+  allMarkdownRemark(
+    limit: 1
+  ) {
     edges {
       node {
-        html
         frontmatter {
           title
         }
