@@ -7,11 +7,12 @@ class SocialLinks extends React.Component {
     const { userLinks } = this.props.config;
     const { labeled } = this.props;
     return userLinks.map(link => (
-      <button className="button"
-              key={link.label}
-              href={link.url}>
+      <a className="button"
+         key={link.label}
+         href={link.url}
+         target="_blank">
         {labeled ? link.label : ''}
-      </button>
+      </a>
     ));
   }
   render() {

@@ -12,7 +12,6 @@ module.exports = {
   disqusShortname: "https-vagr9k-github-io-gatsby-advanced-starter", // Disqus shortname.
   postDefaultCategoryID: "Tech", // Default category for posts.
   userName: "With Pulp", // Username to display in the author segment.
-  userTwitter: "_withpulp", // Optionally renders "Follow Me" in the UserInfo segment.
   userLocation: "New York, New York", // User location to display in the author segment.
   userAvatar: "https://api.adorable.io/avatars/150/test.png", // User avatar to display in the author segment.
   userDescription: "", // User description to display in the author segment.
@@ -20,18 +19,18 @@ module.exports = {
   userLinks: [
     {
       label: "GitHub",
-      url: "https://github.com/withpulp/gatsby-oRanger",
-      iconClassName: "fa fa-github"
+      url: "https://github.com/withpulp",
+      icon: "fa fa-github"
     },
     {
       label: "Twitter",
       url: "https://twitter.com/_withpulp",
-      iconClassName: "fa fa-twitter"
+      icon: "fa fa-twitter"
     },
     {
       label: "Email",
       url: "mailto:damir@withpulp.com",
-      iconClassName: "fa fa-envelope"
+      icon: "fa fa-envelope"
     }
   ],
   copyright: "Copyright © 2017. With Pulp", // Copyright string for the footer of the website and RSS feed.

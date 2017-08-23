@@ -3,6 +3,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Hero from '../containers/hero/';
 import Markdown from '../containers/markdown';
+import SocialLinks from '../components/social_links';
 import config from '../../data/SiteConfig';
 
 class AboutIndex extends React.Component {
@@ -29,6 +30,7 @@ class AboutIndex extends React.Component {
         <Helmet title={`About | ${config.siteTitle}`} />
         <Hero data={hero} />
         <Markdown data={about} />
+        <SocialLinks config={config} contained labeled />
       </div>
     );
   }
