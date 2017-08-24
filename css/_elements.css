@@ -147,31 +147,27 @@
 	cursor: pointer;
 	margin: 0 auto;
 	margin-bottom: 1em;
-	padding: 1em;
+	padding: 0.75em 1em;
 	outline: 0;
-	border: 0.1em solid #a0a0a0;
-	background-color: transparent;
-	color: #222;
+	border: 0;
+	background-color: #e66500;
+	color: #fff;
 	font-family: 'Ubuntu','Open Sans','Helvetica Neue','Helvetica','Arial','sans-serif';
 	text-align: center;
+	text-decoration: none;
 	line-height: 1;
 	transition: all 250ms;
 }
 
 .button:hover {
-	border-color: #93B556;
-	color: #cf3c44;
-}
-
-.button:active {
-	background-color: #cf3c44;
-	border-color: #cf3c44;
+	background-color: #e24a00;
 	color: #fff;
+	text-decoration: none;
 }
 
 .button.transparent {
-	border: 0;
 	background-color: transparent;
+	color: #201a2d;
 }
 
 code[class*="language-"],

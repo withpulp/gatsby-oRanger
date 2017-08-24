@@ -11,7 +11,9 @@ class SocialLinks extends React.Component {
          key={link.label}
          href={link.url}
          target="_blank">
-        {labeled ? link.label : ''}
+        {labeled ?
+          link.label
+        : ''}
       </a>
     ));
   }
@@ -19,12 +21,29 @@ class SocialLinks extends React.Component {
     const { userLinks } = this.props.config;
     if (!userLinks) {
       return null;
+    } else {
+      const { contained } = this.props;
+      let figure;
+
+      if (contained) {
+        figure = (
+          <section className="user links section">
+            <h2 className="title">Get In Touch</h2>
+            <figure className="user links figure">
+              { this.getLinkElements() }
+            </figure>
+          </section>
+        );
+      } else {
+        figure = (
+          <figure className="user links figure">
+            { this.getLinkElements() }
+          </figure>
+        );
+      }
+
+      return figure;
     }
-    return (
-      <figure className="user links figure">
-        { this.getLinkElements() }
-      </figure>
-    );
   }
 }
 
