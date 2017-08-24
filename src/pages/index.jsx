@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Hero from '../containers/hero/';
 import Blog from '../containers/blog/';
 import SEO from '../components/seo/';
-import config from '../../data/SiteConfig';
+import config from '../../data/config';
 
 class Index extends React.Component {
   render() {

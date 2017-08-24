@@ -4,7 +4,7 @@ import Tags from '../../components/tags/';
 import Disqus from '../../components/disqus/';
 import SocialShare from '../../components/social_share/';
 import ReadingTime from '../../components/reading_time/';
-import config from '../../../data/SiteConfig';
+import config from '../../../data/config';
 import './index.css';
 
 class Article extends React.Component {

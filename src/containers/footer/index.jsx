@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import Link from 'gatsby-link';
 import Quotes from '../../components/quotes/';
-import config from '../../../data/SiteConfig';
+import config from '../../../data/config';
 import quotes from '../../../data/quotes';
 import './index.css';
 

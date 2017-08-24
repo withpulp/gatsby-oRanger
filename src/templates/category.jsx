@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import Hero from '../containers/hero/';
 import Blog from '../containers/blog/';
-import config from '../../data/SiteConfig';
+import config from '../../data/config';
 
 export default class CategoryTemplate extends React.Component {
   render() {

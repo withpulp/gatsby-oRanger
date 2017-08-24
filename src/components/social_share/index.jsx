@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShareButtons, ShareCounts, generateShareIcon } from 'react-share';
-import config from '../../../data/SiteConfig';
+import config from '../../../data/config';
 import './index.css';
 
 class SocialShare extends React.Component {

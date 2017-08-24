@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import ReactDisqusComments from 'react-disqus-comments';
-import config from '../../../data/SiteConfig';
+import config from '../../../data/config';
 import './index.css';
 
 class Disqus extends Component {

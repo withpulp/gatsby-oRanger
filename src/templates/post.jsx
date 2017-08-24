@@ -6,7 +6,7 @@ import SEO from '../components/seo/';
 import Hero from '../containers/hero/';
 import Article from '../containers/article';
 import Affixed from '../containers/affixed';
-import config from '../../data/SiteConfig';
+import config from '../../data/config';
 
 export default class PostTemplate extends React.Component {
   render() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReadNext from '../../components/read_next';
 import ReadingTime from '../../components/reading_time/';
-import config from '../../../data/SiteConfig';
+import config from '../../../data/config';
 import './index.css';
 
 class Affixed extends React.Component {
