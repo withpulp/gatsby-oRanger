@@ -13,7 +13,7 @@ class Posts extends React.Component {
             <li className="item"
                 key={post.path}>
               <Link className="link"
-                    to={post.path}>
+                    to={`/posts${post.path}`}>
                 <h2 className="title">
                   {post.title}
                   <small className="sub meta">

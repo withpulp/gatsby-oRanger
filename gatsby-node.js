@@ -75,7 +75,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
 
           if (edge.node.frontmatter.type === 'post') {
             createPage({
-              path: edge.node.fields.slug,
+              path: `/posts${edge.node.fields.slug}`,
               component: postPage,
               context: {
                 slug: edge.node.fields.slug,
@@ -87,7 +87,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const tagList = Array.from(tagSet);
         tagList.forEach((tag) => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
+            path: `/posts/tags/${_.kebabCase(tag)}/`,
             component: tagPage,
             context: {
               tag,
@@ -98,7 +98,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         const categoryList = Array.from(categorySet);
         categoryList.forEach((category) => {
           createPage({
-            path: `/categories/${_.kebabCase(category)}/`,
+            path: `/posts/categories/${_.kebabCase(category)}/`,
             component: categoryPage,
             context: {
               category,
