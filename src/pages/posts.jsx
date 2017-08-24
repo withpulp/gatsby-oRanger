@@ -6,14 +6,14 @@ import Blog from '../containers/blog/';
 import SEO from '../components/seo/';
 import config from '../../data/config';
 
-class Index extends React.Component {
+class PostsIndex extends React.Component {
   render() {
     const { location, data } = this.props;
     const content = data.allMarkdownRemark.edges;
     const hero = {
       type: 'index',
-      title: config.siteTitle,
-      caption: config.siteDescription
+      title: 'Posts',
+      caption: 'Read All About It'
     };
 
     // @TODO: filter out post types in graphQL
@@ -26,8 +26,8 @@ class Index extends React.Component {
     });
 
     return (
-      <div className="index page">
-        <Helmet title={`${config.siteTitle} | ${config.siteDescription}`} />
+      <div className="posts page">
+        <Helmet title={`Posts | ${config.siteTitle}`} />
         <SEO postEdges={posts} />
         <Hero data={hero} />
         <Blog posts={posts} location={location} />
@@ -36,13 +36,13 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default PostsIndex;
 
 /* eslint no-undef: "off"*/
 export const pageQuery = graphql`
-  query IndexQuery {
+  query PostsQuery {
   allMarkdownRemark(
-    limit: 5,
+    limit: 2000,
     sort: { fields: [frontmatter___date], order: DESC },
   ) {
     edges {

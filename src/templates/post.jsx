@@ -37,7 +37,6 @@ export default class PostTemplate extends React.Component {
           <Affixed data={postNode} location={location} type="bottom" />
         </div>
       </div>
-
     );
   }
 }

@@ -142,7 +142,7 @@
 
 /* button */
 .button {
-	display: block;
+	display: inline-block;
 	position: relative;
 	cursor: pointer;
 	margin: 0 auto;

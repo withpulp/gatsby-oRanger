@@ -13,10 +13,9 @@ class Footer extends Component {
     let cta;
 
     // @TODO: refactor to
-    // if path includes '/blog' show null
+    // if path includes '/posts/slug' show null
     // else show quotes
-    // _.include(path, '/blog')
-    if (path === '/' || path === '/about' || path === '/404')  {
+    if (path === '/' || path === '/about' || path === '/posts' || path === '/404')  {
       cta = (
         <Quotes data={quotes} />
       )
