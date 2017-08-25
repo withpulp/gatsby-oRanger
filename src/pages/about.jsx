@@ -49,6 +49,9 @@ query AboutQuery {
           title
           type
         }
+        fields {
+          slug
+        }
       }
     }
   }
