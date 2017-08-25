@@ -6,6 +6,7 @@ import config from '../../data/config';
 
 export default class CategoryTemplate extends React.Component {
   render() {
+    const { location } = this.props;
     const category = this.props.pathContext.category;
     const hero = {
       title: category
@@ -17,7 +18,7 @@ export default class CategoryTemplate extends React.Component {
         <Helmet title={`Posts in category "${category}" | ${config.siteTitle}`} />
         <div className="category page">
           <Hero data={hero} />
-          <Blog posts={posts} />
+          <Blog posts={posts} location={location} />
         </div>
       </div>
 

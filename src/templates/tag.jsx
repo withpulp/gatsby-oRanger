@@ -6,6 +6,7 @@ import config from '../../data/config';
 
 export default class TagTemplate extends React.Component {
   render() {
+    const { location } = this.props;
     const tag = this.props.pathContext.tag;
     const hero = {
       title: tag
@@ -17,7 +18,7 @@ export default class TagTemplate extends React.Component {
         <Helmet title={`Posts tagged as "${tag}" | ${config.siteTitle}`} />
         <div className="tag page">
           <Hero data={hero} />
-          <Blog posts={posts} />
+          <Blog posts={posts} location={location} />
         </div>
       </div>
     );
