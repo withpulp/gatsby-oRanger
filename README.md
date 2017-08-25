@@ -1,5 +1,4 @@
 <img src="static/logos/logo-1024.png" alt="Logo" width='200px' height='200px'/>
-![logo](static/logos/logo-1024.png)
 
 # Gatsby oRanger
 
@@ -139,7 +138,7 @@ module.exports = {
  ```js
  module.exports = {
   // Note: it must *not* have a trailing slash.
-       pathPrefix: '/gatsby-oRanger', // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
+       pathPrefix: '/gatsby-oRanger', // Prefixes all links. For cases when deployed to withpulp.github.io/gatsby-oRanger/.
 }
 
  ```
